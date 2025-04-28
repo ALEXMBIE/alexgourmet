@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexgourmet - Restaurant Africain</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #473131;
+            scroll-behavior: smooth;
+            color: #fbf9f9;
+        }
+        header {
+    background-image: url(Images\ salle.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fffffc;
+    padding: 50px 20px;
+    text-align: center;
+}
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #f4c430;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+            border-bottom: 2px solid #f4c430;
+        }
+        section {
+            padding: 50px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .menu, .team, .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu-item {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 1px 1px 2px black;
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+        .team-member, .gallery-photo {
+            border: 1px solid #faf3f3;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #ae5959;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .team-member:hover, .gallery-photo:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #f4c430;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        .contact {
+            background-color: #f4c430;
+            color: #1e1e1e;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 40px auto;
+            width: 90%;
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Bienvenue chez Alexgourmet</h1>
+    <p>Le goût authentique de l'Afrique dans votre assiette</p>
+</header>
+<nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#menu">Menu</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#equipe">Notre Équipe</a>
+    <a href="#contact">Contact</a>
+</nav>
+<section id="accueil">
+    <h2>Accueil</h2>
+    <p>Chez Alexgourmet, plongez dans un voyage culinaire inoubliable où chaque plat est une invitation à découvrir les saveurs authentiques de l'Afrique. Notre équipe passionnée vous propose une expérience gastronomique unique, alliant les recettes traditionnelles aux touches modernes pour éveiller vos sens. Que vous soyez un amateur de mets épicés ou un fervent adepte de douceurs, chaque bouchée est un délice. Avec des produits frais et locaux, nous mettons un point d'honneur à vous offrir des plats qui racontent une histoire, celle des richesses et de la diversité de la cuisine africaine. Venez savourer l'authenticité, le goût et l'accueil chaleureux d'Alexgourmet, un lieu où chaque repas est un véritable festin pour l'âme et les papilles.</p>
+</section>
+
+<section id="menu">
+    <h2>Notre Menu du jour</h2>
+    <div class="menu">
+        <div class="menu-item" style="background-image: url('IMAGE\ NDOLE.jpg');">
+            <h3>Ndolé Camerounais</h3>
+            <p>Feuilles amères, arachides, viande tendre.</p>
+        </div>
+        <div class="menu-item" style="background-image: url('Image\ pouler.jpg');">
+            <h3>Yassa Poulet</h3>
+            <p>Mariné au citron et oignons caramélisés.</p>
+        </div>
+        <div class="menu-item" style="background-image: url('Image\ poisson.jpg');">
+            <h3>Poisson Braisé</h3>
+            <p>Poisson grillé, plantains frits, épices africaines.</p>
+        </div>
+    </div>
+</section>
+
+<section id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <div class="gallery-photo">
+            <img src="IMAGES POUR LE RESTAURANT/Ambiance.jpg" alt="Ambiance" width="100%" height="150px">
+            <p>Ambiance chaleureuse</p>
+        </div>
+        <div class="gallery-photo">
+            <img src="IMAGES POUR LE RESTAURANT/plats africain.jpg" alt="Plat africain" width="100%" height="150px">
+            <p>Délices d'Afrique</p>
+        </div>
+        <div class="gallery-photo">
+            <img src="IMAGES POUR LE RESTAURANT/image décor.jpg" alt="Décor traditionnel" width="100%" height="150px">
+            <p>Décoration artisanale</p>
+        </div>
+    </div>
+</section>
+
+<section id="equipe">
+    <h2>Notre Équipe(hauts cadres)</h2>
+    <div class="team">
+        <div class="team-member">
+            <img src="Image Mbie.jpg" alt="Chef" width="100%" height="150px">
+            <h3>Alex Mbie</h3>
+            <p>Chef Exécutif responsable et propiétaire du Restaurant</p>
+        </div>
+        <div class="team-member">
+            <img src="" alt="Responsable" width="100%" height="150px">
+            <h3>Rayan F.</h3>
+            <p>Responsable de Salle</p>
+        </div>
+        <div class="team-member">
+            <img src="Image kenza.jpg" alt="image" width="100%" height="150px">
+            <h3>KENZA JOYCE.</h3>
+            <p>Directrice du service et co-propriétaire</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact">
+        <h2>Contactez-nous</h2>
+        <p>Appelez-nous au <strong>658120117</strong></p>
+        <p>Livraison 7j/7, de 10h00 à 00h30</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Alexgourmet - Tous droits réservés</p>
+    <p>Situé a Bonapriso_Doualacameroun</p>
+</footer>
+<script>
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
